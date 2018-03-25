@@ -62,7 +62,7 @@ while True:
 
         if graph:
             print "%f %f %f" % (now, cpm, usvph)
-            stdout.flush()
+            sys.stdout.flush()
         else:
             print "[%s] (average over %3.1f s) %3.3f CPM, %3.3f uSv/h (min=%3.3f, max=%3.3f) uSv/h" % (date, delta, cpm, usvph, min_usvph, max_usvph)
 
