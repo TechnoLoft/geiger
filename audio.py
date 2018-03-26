@@ -8,10 +8,10 @@ COUNT_THRESHOLD = 135
 
 # Number of samples over which we seek a tick.
 # That is a duration equal to BUFFER_SIZE / speed (8 kHz).
-BUFFER_SIZE     = 64     # 8 ms
+BUFFER_SIZE     = 64      # 8 ms
 
 # Geiger tube CPM to uSv/h factor.
-CPM_TO_USVpH    = 0.0081 # J305
+CPM_TO_USVpH    = 0.00812 # J305
 
 # Compute CPM using the last COUNTS_SIZE ticks.
 # The larger the value, the more averaged the result.
