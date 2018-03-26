@@ -4,7 +4,7 @@ import ossaudiodev
 from collections import deque
 
 # dsp level that counts for a tick
-COUNT_THRESHOLD = 135
+COUNT_THRESHOLD = 200
 
 # Number of samples over which we seek a tick.
 # That is a duration equal to BUFFER_SIZE / speed (8 kHz).
@@ -44,7 +44,7 @@ while True:
     samples = map(ord, samples)
     now = time.time()
 
-    if max(samples) > COUNT_THRESHOLD:
+    if max(samples) >= COUNT_THRESHOLD:
         counts.append(now)
 
     if len(counts) > COUNTS_SIZE:
